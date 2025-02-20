@@ -5,5 +5,5 @@ resource "azurerm_resource_group" "resource_group" {
   tags     = merge(each.value.resource_group_tags, tomap({ Created_Time = formatdate("DD-MM-YYYY hh:mm:ss ZZZ", timestamp()) }))
   lifecycle { ignore_changes = [tags["Created_Time"]] }
 }
-//added
+
 
