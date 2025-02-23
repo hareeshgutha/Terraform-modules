@@ -1,0 +1,25 @@
+name: Sync GitHub to Azure DevOps
+
+on:
+  push:
+    branches:
+      - main  # Adjust to your branch
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Git
+        run: |
+          git config --global user.email "hareesh.gutha9@gmail.com"
+          git config --global user.name "hareeshgutha"
+
+      - name: Push to Azure DevOps
+        run: |
+          git remote add azure https://dev.azure.com/hareeshgutha9/TERRAFORM/_git/Terraform-modules
+          git push azure main
+        env:
+          AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
