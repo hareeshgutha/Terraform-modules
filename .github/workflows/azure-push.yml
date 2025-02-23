@@ -19,7 +19,7 @@ jobs:
 
       - name: Add Azure DevOps Remote
         run: |
-          git remote add origin https://hareesh.gutha9@gmail.com@dev.azure.com/hareeshgutha9/TERRAFORM/_git/Terraform-modules
+          git remote add origin https://hareesh.gutha9@gmail.com@dev.azure.com/hareeshgutha9/TERRAFORM/_git/Project
           git remote -v
 
       - name: Push to Azure DevOps
