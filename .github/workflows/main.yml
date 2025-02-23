@@ -19,7 +19,7 @@ jobs:
 
       - name: Push to Azure DevOps
         run: |
-          git remote add azure https://dev.azure.com/your-org/your-project/_git/Terraform-modules
+          git remote add azure https://dev.azure.com/hareeshgutha9/TERRAFORM/_git/Terraform-modules
           git push azure main
         env:
           AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
